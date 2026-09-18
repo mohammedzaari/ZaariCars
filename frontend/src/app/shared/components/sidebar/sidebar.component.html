@@ -1,0 +1,25 @@
+<aside class="sidebar">
+  <div class="sidebar__logo">
+    <span class="sidebar__logo-icon">🚗</span>
+    <span class="sidebar__logo-text">{{ brandName() }}</span>
+  </div>
+
+  <nav class="sidebar__nav">
+    @for (item of items(); track item.route) {
+      <app-sidebar-item
+        [icon]="item.icon"
+        [label]="item.label"
+        [route]="item.route"
+        [badge]="item.badge">
+      </app-sidebar-item>
+    }
+  </nav>
+
+  <div class="sidebar__user">
+    <img [src]="userAvatar()" class="sidebar__user-avatar" alt="avatar" />
+    <div class="sidebar__user-info">
+      <span class="sidebar__user-name">{{ userName() }}</span>
+      <span class="sidebar__user-role">{{ userRole() }}</span>
+    </div>
+  </div>
+</aside>

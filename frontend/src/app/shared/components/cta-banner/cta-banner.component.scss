@@ -1,0 +1,43 @@
+.cta-banner {
+  background: #1A1A1A;
+  color: white;
+  border-radius: 16px;
+  padding: 50px;
+  text-align: center;
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    opacity: 0.7;
+    margin-bottom: 24px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+
+  &--primary {
+    background: #8A9B8E;
+    color: #1A1A1A;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+}

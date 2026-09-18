@@ -1,0 +1,16 @@
+<header class="topbar">
+  <div class="topbar__breadcrumb">
+    @for (crumb of breadcrumbs(); track crumb; let last = $last) {
+      <span [class.topbar__breadcrumb-active]="last">{{ crumb }}</span>
+      @if (!last) { <span class="topbar__breadcrumb-sep">›</span> }
+    }
+  </div>
+
+  <div class="topbar__actions">
+    <div class="topbar__search">
+      <input type="text" placeholder="Rechercher..." />
+    </div>
+    <button class="topbar__icon-btn" aria-label="Notifications">🔔</button>
+    <img [src]="userAvatar()" class="topbar__avatar" alt="profil" />
+  </div>
+</header>

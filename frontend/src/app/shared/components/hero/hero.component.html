@@ -1,0 +1,16 @@
+<section class="hero" [style.background-image]="'url(' + backgroundImage() + ')'">
+  <div class="hero__overlay">
+    <span class="hero__tag">{{ tag() }}</span>
+    <h1 class="hero__title">
+      {{ titleLine1() }} <span class="hero__title-accent">{{ titleAccent() }}</span>
+    </h1>
+    <p class="hero__subtitle">{{ subtitle() }}</p>
+
+    <div class="hero__cta">
+      <button class="btn btn--primary" (click)="bookNow.emit()">Réserver maintenant</button>
+      <button class="btn btn--outline" (click)="learnMore.emit()">En savoir plus</button>
+    </div>
+
+    <app-search-bar (search)="search.emit($event)"></app-search-bar>
+  </div>
+</section>

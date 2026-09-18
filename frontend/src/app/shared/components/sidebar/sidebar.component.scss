@@ -1,0 +1,59 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: var(--color-dark, #1A1A1A);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  position: sticky;
+  top: 0;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 8px 24px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 12px;
+
+    &-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    &-role {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.75rem;
+    }
+  }
+}

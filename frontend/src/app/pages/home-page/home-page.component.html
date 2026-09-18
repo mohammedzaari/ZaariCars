@@ -1,0 +1,41 @@
+<div class="layout">
+  <app-sidebar [items]="sidebarItems" brandName="ZaariCars"></app-sidebar>
+
+  <div class="layout__main">
+    <app-topbar [breadcrumbs]="['ZaariCars', 'Tableau de bord']"></app-topbar>
+
+    <main class="layout__content">
+      <app-hero (search)="onSearch($event)"></app-hero>
+
+      <section class="fleet">
+        <h2>Explorez notre flotte</h2>
+        <div class="fleet__grid">
+          @for (cat of categories; track cat.title) {
+            <app-category-card
+              [image]="cat.image"
+              [title]="cat.title"
+              [description]="cat.description"
+              [modelCount]="cat.count"
+              (viewModels)="goToCategory(cat.title)">
+            </app-category-card>
+          }
+        </div>
+      </section>
+
+      <section class="trust">
+        @for (f of features; track f.title) {
+          <app-feature-item
+            [icon]="f.icon"
+            [title]="f.title"
+            [description]="f.description">
+          </app-feature-item>
+        }
+      </section>
+
+      <app-cta-banner
+        subtitle="Rejoignez le club ZaariCars et accédez à des tarifs exclusifs et au surclassement prioritaire sur toute la France."
+        (primaryAction)="signup()">
+      </app-cta-banner>
+    </main>
+  </div>
+</div>

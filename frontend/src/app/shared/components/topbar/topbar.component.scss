@@ -1,0 +1,45 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: white;
+  border-bottom: 1px solid #eee;
+
+  &__breadcrumb {
+    display: flex;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: #888;
+
+    &-active { color: #1A1A1A; font-weight: 600; }
+    &-sep { color: #ccc; }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__search input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 14px;
+    width: 240px;
+  }
+
+  &__icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

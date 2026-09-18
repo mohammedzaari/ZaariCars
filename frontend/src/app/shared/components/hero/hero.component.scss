@@ -1,0 +1,63 @@
+.hero {
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  padding: 60px 40px 100px;
+  position: relative;
+  color: white;
+
+  &__overlay {
+    max-width: 600px;
+  }
+
+  &__tag {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 16px 0;
+
+    &-accent {
+      color: #8A9B8E;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 24px;
+  }
+
+  &__cta {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+
+  &--primary {
+    background: #8A9B8E;
+    color: #1A1A1A;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+}

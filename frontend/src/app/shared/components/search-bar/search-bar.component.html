@@ -1,0 +1,20 @@
+<div class="search-bar">
+  <div class="search-bar__field">
+    <label>Lieu de prise en charge</label>
+    <input type="text" [(ngModel)]="location" placeholder="Ville, aéroport..." />
+  </div>
+  <div class="search-bar__field">
+    <label>Dates de location</label>
+    <input type="text" [(ngModel)]="dates" placeholder="Sélectionner les dates" />
+  </div>
+  <div class="search-bar__field">
+    <label>Type de véhicule</label>
+    <select [(ngModel)]="vehicleType">
+      <option value="">Tous types</option>
+      <option value="suv">SUV & 4x4</option>
+      <option value="berline">Berline</option>
+      <option value="electrique">Électrique</option>
+    </select>
+  </div>
+  <button class="search-bar__submit" (click)="onSearch()">Rechercher</button>
+</div>

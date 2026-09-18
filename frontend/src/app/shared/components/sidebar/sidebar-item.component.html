@@ -1,0 +1,13 @@
+<a
+  [routerLink]="route()"
+  routerLinkActive="sidebar-item--active"
+  class="sidebar-item"
+  [class.sidebar-item--disabled]="disabled()">
+
+  <i class="sidebar-item__icon" [class]="'icon-' + icon()"></i>
+  <span class="sidebar-item__label">{{ label() }}</span>
+
+  @if (badge()) {
+    <span class="sidebar-item__badge">{{ badge() }}</span>
+  }
+</a>

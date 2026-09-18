@@ -1,0 +1,42 @@
+.search-bar {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: #1A1A1A;
+  flex-wrap: wrap;
+
+  &__field {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    input,
+    select {
+      border: none;
+      font-size: 0.9rem;
+      padding: 4px 0;
+      background: transparent;
+    }
+  }
+
+  &__submit {
+    background: #8A9B8E;
+    border: none;
+    border-radius: 8px;
+    padding: 0 24px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
