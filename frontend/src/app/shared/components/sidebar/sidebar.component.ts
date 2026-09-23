@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { SidebarItemComponent, SidebarItemConfig } from './sidebar-item.component';
+import { form } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,4 +14,6 @@ export class SidebarComponent {
   userName = input('Utilisateur');
   userRole = input('Client');
   userAvatar = input('assets/avatar-placeholder.png');
+
+ 
 }
